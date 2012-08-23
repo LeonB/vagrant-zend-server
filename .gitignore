@@ -1,0 +1,11 @@
+# Windows-specific files
+Thumbs.db
+desktop.ini
+
+# Mac-specific things (thanks to Michael Aaron Safyan)
+.DS_Store
+
+# Editors temporary files
+*~
+*.sublime-project
+*.sublime-workspace
