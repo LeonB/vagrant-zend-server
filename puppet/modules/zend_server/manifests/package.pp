@@ -10,7 +10,13 @@ class zend_server::package {
 	  include_src       => false
 	}
 
-	package  { [$zend_server::package_name, 'phpmyadmin-zend-server', 'php5-suhosin']:
+	package  { $zend_server::package_name:
 		ensure => present,
+		require => Exec['apt_update']
+	}
+
+	package  { ['phpmyadmin-zend-server', 'php5-suhosin']:
+		ensure => present,
+		require => [Exec['apt_update'], Package[$zend_server::package_name]]
 	}
 }
