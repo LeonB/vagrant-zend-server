@@ -3,17 +3,18 @@ This Vagrant project is made for developers who want an easy to use LAMP stack o
 
 It uses the Zend Community server from the zend repos. The Zend Server is an easy to use webinterface to Apache/PHP so even inexperienced users can easily view the apache logs, change php ini values and debug their code.
 
-![Zend Server admin screenshot](https://github.com/LeonB/vagrant-zend-server/raw/master/zend-server-admin.jpg)]
+![Zend Server admin screenshot](https://github.com/LeonB/vagrant-zend-server/raw/master/zend-server-admin.jpg)
 
 ## What does it contain? ##
 It's based on the precise32 box from www.vagrantbox.es and it contains the following extra software:
 
 * zend-server-ce-php-5.3
 * phpmyadmin-zend-server
-* msmtp
+* postfix
 
 ## How to use it ##
 * clone the project
+* edit Vagrantfile and edit the puppet.facter variables
 * enter the directory and do a `vagrant up`
 
 The admin interface is on http://localhost:10081<br />

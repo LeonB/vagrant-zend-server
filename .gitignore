@@ -9,3 +9,6 @@ desktop.ini
 *~
 *.sublime-project
 *.sublime-workspace
+
+# Application specific
+/.vagrant

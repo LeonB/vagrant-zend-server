@@ -5,7 +5,12 @@ package  { 'language-pack-nl':
 	require => Exec['apt_update']
 }
 
-# class { 'augeas': }
 class { 'motd': }
+class { 'timezone': }
+class { 'aliases': }
 class { 'unattended_upgrades': }
 class { 'zend_server': }
+
+if $::relayhost {
+	class { 'postfix': }
+}

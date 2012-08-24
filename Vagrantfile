@@ -65,6 +65,12 @@ Vagrant::Config.run do |config|
     puppet.manifest_file  = "base.pp"
     puppet.module_path    = "puppet/modules/"
     puppet.options        = "--verbose --debug"
+    puppet.facter         = {
+      "root_emailaddress"  => "johndoe@example.com",
+      "relayhost"          => "smtp.example.com",
+      "relayhost_username" => "john@example.com",
+      "relayhost_password" => "mysecretpassword1019*&^&^"
+    }
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path (relative
