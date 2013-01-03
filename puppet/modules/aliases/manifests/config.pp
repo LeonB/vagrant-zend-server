@@ -8,8 +8,9 @@ class aliases::config {
 
 	# Rebuild the database, but only when the file changes
 	exec { newaliases:
-		path => ["/usr/bin", "/usr/sbin"],
-		subscribe => File["/etc/aliases"],
-		refreshonly => true
+		path        => ["/usr/bin", "/usr/sbin"],
+		subscribe   => File["/etc/aliases"],
+		refreshonly => true,
+		require     => Class['Postfix'],
 	}
 }

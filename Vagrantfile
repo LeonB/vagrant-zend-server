@@ -22,7 +22,7 @@ Vagrant::Config.run do |config|
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
   # network interface) by any external networks.
-  # config.vm.network :hostonly, "192.  168.33.10"
+  # config.vm.network :hostonly, "192.168.33.10"
 
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
@@ -40,7 +40,12 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
-  config.vm.share_folder "public_html", "/var/www/", "~/Public/"
+  config.vm.share_folder "public_html", "/var/www/", "~/Public/", :owner => 'www-data', :group => 'www-data'
+
+  # Fix for ubuntu 12.10
+  config.vm.customize ["modifyvm", :id, '--natdnsproxy1', 'on']
+  config.vm.customize ["modifyvm", :id, '--natdnshostresolver1', 'on']
+  config.vm.customize ["modifyvm", :id, '--vram', 12]
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
