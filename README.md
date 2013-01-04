@@ -17,7 +17,7 @@ It's based on the precise32 box from www.vagrantbox.es and it contains the follo
 * edit Vagrantfile and edit the puppet.facter variables
 * enter the directory and do a `vagrant up`
 
-The admin interface is on http://localhost:10081<br />
+The admin interface is on http://localhost:10081 or https://localhost:10082<br />
 The webserver can be accessed on http://localhost:8080
 
 `~/Public` (based on the Ubuntu desktop homedirectory layout) is mounted to the VM's `/var/www`.
