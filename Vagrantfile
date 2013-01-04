@@ -75,6 +75,7 @@ Vagrant::Config.run do |config|
       "relayhost"          => "smtp.example.com",
       "relayhost_username" => "john@example.com",
       "relayhost_password" => "mysecretpassword1019*&^&^"
+      "timezone"           => "Europe/Amsterdam"
     }
   end
 
