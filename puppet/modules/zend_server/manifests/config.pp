@@ -29,4 +29,12 @@ class zend_server::config {
 		require => Class['zend_server::package']
 	}
 
+	file { '/etc/profile.d/zend_server.sh':
+		ensure => present,
+		owner  => 'root',
+		group  => 'root',
+		mode   => 0664,
+		source  => "puppet:///modules/zend_server/etc/profile.d/zend_server.sh",
+	}
+
 }
