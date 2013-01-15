@@ -4,7 +4,7 @@ class zend_server::package {
 	  location          => "http://repos.zend.com/zend-server/deb/",
 	  release           => "server",
 	  repos             => "non-free",
-	  key 							=> "F7D2C623",
+	  key 				=> "F7D2C623",
 	  # key_server				=> 'pgp.mit.edu'
 	  # key_source        => "http://repos.zend.com/zend.key",
 	  include_src       => false
@@ -12,11 +12,11 @@ class zend_server::package {
 
 	package  { $zend_server::package_name:
 		ensure => present,
-		require => Exec['apt_update']
+		require => Apt::Source['zend_server']
 	}
 
 	package  { ['phpmyadmin-zend-server', 'php5-suhosin']:
 		ensure => present,
-		require => [Exec['apt_update'], Package[$zend_server::package_name]]
+		require => [Apt::Source['zend_server'], Package[$zend_server::package_name]]
 	}
 }
