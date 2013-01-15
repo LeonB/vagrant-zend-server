@@ -11,4 +11,9 @@ class postfix::config {
      ensure => present,
      content => template("postfix/sasl_passwd.erb")
    }
+
+   postfix::hash { "/etc/postfix/generic":
+     ensure => present,
+     content => template("postfix/generic.erb")
+   }
 }
