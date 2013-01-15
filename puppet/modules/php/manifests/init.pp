@@ -5,7 +5,8 @@ class php {
 		ensure  => present,
 		owner   => 'root',
 		group   => 'root',
-		mode    => '0644'
+		mode    => '0644',
+		require => Class['zend_server']
 	}
 
 }
