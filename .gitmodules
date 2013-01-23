@@ -7,3 +7,6 @@
 [submodule "puppet/modules/stdlib"]
 	path = puppet/modules/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "puppet/modules/iptables"]
+	path = puppet/modules/iptables
+	url = https://github.com/camptocamp/puppet-iptables.git
