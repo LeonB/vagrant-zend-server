@@ -31,3 +31,15 @@ iptables { "route 8080 to 80 for loopback device":
 	dport   => "8080",
 	toports => "80",
 }
+
+import 'alternatives' # https://github.com/uggedal/puppet-module-debian
+
+debian::alternatives::add { "php":
+	link => "/usr/bin/php",
+	path => "/usr/local/zend/bin/php",
+	priority => 1,
+}
+
+debian::alternatives::set { "php":
+	path => "/usr/local/zend/bin/php",
+}
