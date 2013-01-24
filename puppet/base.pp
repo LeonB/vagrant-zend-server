@@ -38,8 +38,10 @@ debian::alternatives::add { "php":
 	link => "/usr/bin/php",
 	path => "/usr/local/zend/bin/php",
 	priority => 1,
+	require => Class['zend_server'],
 }
 
 debian::alternatives::set { "php":
 	path => "/usr/local/zend/bin/php",
+	require => Debian::Alternatives::Add['php'],
 }
