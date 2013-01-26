@@ -6,7 +6,8 @@ class php {
 		owner   => 'root',
 		group   => 'root',
 		mode    => '0644',
-		require => Class['zend_server']
+		require => Class['zend_server'],
+		notify =>  Class['zend_server::service']
 	}
 
 }
