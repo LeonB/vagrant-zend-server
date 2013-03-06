@@ -22,3 +22,11 @@ The webserver can be accessed on http://localhost:8080
 
 `~/Public` (based on the Ubuntu desktop homedirectory layout) is mounted to the VM's `/var/www`.
 There you can place your files so they are accessible on http://localhost:8080
+
+## Tips ##
+
+Quicly changing the package mirrors (in this case from us to nl):
+
+```
+sudo sed 's@us.archive.ubuntu.com@nl.archive.ubuntu.com@' -i /etc/apt/sources.list
+```
