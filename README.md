@@ -18,7 +18,9 @@ It's based on the precise32 box from www.vagrantbox.es and it contains the follo
 * enter the directory and do a `vagrant up`
 
 The admin interface is on http://localhost:10081 or https://localhost:10082<br />
-The webserver can be accessed on http://localhost:8080
+The webserver can be accessed on http://localhost:8080.
+
+The mysql port on the Vagrant instance is redirected to localhost:3306 (so you can easily use MySQL workbench or something). If you already have MySQL running on you local host machine this could give some problems.
 
 `~/Public` (based on the Ubuntu desktop homedirectory layout) is mounted to the VM's `/var/www`.
 There you can place your files so they are accessible on http://localhost:8080
