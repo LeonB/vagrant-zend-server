@@ -6,7 +6,7 @@ It uses the Zend Community server from the zend repos. The Zend Server is an eas
 ![Zend Server admin screenshot](https://github.com/LeonB/vagrant-zend-server/raw/master/zend-server-admin.jpg)
 
 ## What does it contain? ##
-It's based on the precise32 box from www.vagrantbox.es and it contains the following extra software:
+It's based on the precise64 box (http://files.vagrantup.com/precise64.box) and it contains the following extra software:
 
 * zend-server-ce-php-5.3
 * phpmyadmin-zend-server
