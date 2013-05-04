@@ -10,6 +10,4 @@
 Enkele belangrijke files:
  - zend server ce: /usr/local/zend
  - apache bestanden: /var/www
- - custom boot: /usr/local/bin
- - mta: /etc/msmtprc
 
