@@ -25,6 +25,14 @@ The mysql port on the Vagrant instance is redirected to localhost:3306 (so you c
 `~/Public` (based on the Ubuntu desktop homedirectory layout) is mounted to the VM's `/var/www`.
 There you can place your files so they are accessible on http://localhost:8080
 
+phpmyadmin can be accessed on http://localhost:10081/phpmyadmin
+
+The default mysql password is empty so you have to set in. Login via ssh: `vagrant ssh` and set the password:
+
+``` bash
+mysqladmin -u root password mYSupAhSecretPaszW0rD
+```
+
 ## Tips ##
 
 Quicly changing the package mirrors (in this case from us to nl):
