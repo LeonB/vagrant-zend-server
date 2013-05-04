@@ -37,4 +37,12 @@ class zend_server::config {
 		source  => "puppet:///modules/zend_server/etc/profile.d/zend_server.sh",
 	}
 
+	file { '/etc/apache2/conf.d/vagrant':
+		ensure => present,
+		owner  => 'root',
+		group  => 'root',
+		mode   => 0644,
+		source  => "puppet:///modules/zend_server/etc/apache2/conf.d/vagrant",
+	}
+
 }
